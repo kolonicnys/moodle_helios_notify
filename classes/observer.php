@@ -23,7 +23,7 @@ class observer {
     }
 
     // ---------------------------------------------------------------------
-    //                    Společná logika a utility
+    //                    Logika a utility
     // ---------------------------------------------------------------------
 
     /**
@@ -174,7 +174,6 @@ XML;
 
     /**
      * Extrakce tokenu z LogOnResponse (defaultní namespace "http://lcs.cz/webservices/").
-     * Robustní – nejprve XPath, pak regex fallback "čísla,čísla".
      */
     private static function extract_token(string $xml): ?string {
         $sx = @simplexml_load_string($xml);
